@@ -47,10 +47,9 @@ io.on('connection', function (socket) {
 
 function countVotes(votes) {
 var voteCount = {
-    A: 0,
-    B: 0,
-    C: 0,
-    D: 0
+    DIAF: 0,
+    Okay: 0,
+    Solid: 0
 };
   for (var vote in votes) {
     voteCount[votes[vote]]++

@@ -2,20 +2,32 @@
 <html>
   <head>
     <title>Hustle the People</title>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
   </head>
   <body>
     <!-- Make sure your JS is at the bottom of the body! -->
-    <h3>Hustlin' the People</h3>
+    <div class="jumbotron">
+	    <div class="container">
+	    	<h1>Hustle the People, Steve</h1>
+	    </div>
+    </div>
     <div id="connection-count"></div>
     What's your status?
     <div id="status-message"></div>
     Choose an option
     <div id="choices">
-		  <button>A</button>
-		  <button>B</button>
-		  <button>C</button>
-		  <button>D</button>
+		  <button type="button" class="btn btn-default btn-sm">
+  			<span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
+  			This is old hat to me
+  		</button>
+  		<button type="button" class="btn btn-default btn-sm">
+  			<span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+		  		I have an okay understanding this
+		  </button>
+		  <button type="button" class="btn btn-default btn-sm">
+  			<span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
+		  	I have no idea what you're babbling about
+		  </button>
 		</div>
 		Your vote: <div id="user-vote"></div>
 		<div id="results">
