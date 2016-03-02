@@ -20,6 +20,12 @@ for (var i = 0; i < buttons.length; i++) {
   });
 }
 
+var resultCount = document.getElementById('results');
+
 socket.on('voteCount', function (votes) {
-  console.log(votes);
+  var results = "Results: ";
+    for (var vote in votes) {
+      results = results + vote + ": " +  votes[vote] + " "
+    };
+  resultCount.innerText = results;
 });

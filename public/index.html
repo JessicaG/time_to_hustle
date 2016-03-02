@@ -1,17 +1,24 @@
 <!doctype html>
 <html>
   <head>
-    <title>Ask the Audience</title>
+    <title>Hustle the People</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css'>
   </head>
   <body>
     <!-- Make sure your JS is at the bottom of the body! -->
+    <h3>Hustlin' the People</h3>
     <div id="connection-count"></div>
+    What's your status?
     <div id="status-message"></div>
+    Choose an option
     <div id="choices">
 		  <button>A</button>
 		  <button>B</button>
 		  <button>C</button>
 		  <button>D</button>
+		</div>
+		Results:
+		<div id="results">
 		</div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/client.js"></script>
