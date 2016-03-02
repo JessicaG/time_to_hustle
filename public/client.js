@@ -29,3 +29,9 @@ socket.on('voteCount', function (votes) {
     };
   resultCount.innerText = results;
 });
+
+var userVote = document.getElementById('user-vote');
+
+socket.on('userVote', function (message) {
+	userVote.innerText = message;
+});
