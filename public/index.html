@@ -11,27 +11,60 @@
 	    	<h1>Hustle the People, Steve</h1>
 	    </div>
     </div>
-    <div id="connection-count"></div>
-    What's your status?
-    <div id="status-message"></div>
-    Choose an option
-    <div id="choices">
-		  <button type="button" class="btn btn-default btn-sm">
-  			<span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
-  			This is old hat to me
-  		</button>
-  		<button type="button" class="btn btn-default btn-sm">
-  			<span class="glyphicon glyphicon-education" aria-hidden="true"></span>
-		  		I have an okay understanding this
-		  </button>
-		  <button type="button" class="btn btn-default btn-sm">
-  			<span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
-		  	I have no idea what you're babbling about
-		  </button>
+    <div class="col-md-12">
+	    <div class="col-md-6">
+	      <form action="/poll" method="post">
+				  <div class="container">
+				    <label>Please enter poll name.</label>
+				    <input type="text" name="poll[title]" class="form-control">
+
+				    <label>Please choose a poll password or enter your existing password if you are a returning user.</label>
+				    <input type="password-field" name="poll[adminId]" class="form-control">
+				    </div>
+				    <div class="col-md-6">
+					    <label>Enter up to four options.</label>
+					    <input type="text" name="poll[options]" class="form-control">
+					    <input type="text" name="poll[options]" class="form-control">
+					    <input type="text" name="poll[options]" class="form-control">
+					    <input type="text" name="poll[options]" class="form-control">
+
+
+				    <label>How long do you want your poll to be?</label>
+
+				    
+				    <input type="text" name="poll[runtime]" value="N/A" class="form-control">
+				    <input id="submit" type="submit" class="btn btn-default"></input>
+				    </div>
+				  </div>
+				</form>
+			</div>
 		</div>
-		Your vote: <div id="user-vote"></div>
-		<div id="results">
+
+		<div class="col-md-12">
+	    <div id="connection-count"></div>
+	    What's your status?
+	    <div id="status-message"></div>
+	    Choose an option
+	    <div id="choices">
+			  <button type="button" class="btn btn-default btn-sm">
+	  			<span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
+	  			This is old hat to me
+	  		</button>
+	  		<button type="button" class="btn btn-default btn-sm">
+	  			<span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+			  		I have an okay understanding this
+			  </button>
+			  <button type="button" class="btn btn-default btn-sm">
+	  			<span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
+			  	I have no idea what you are babbling about
+			  </button>
+			</div>
+			<div class="col-md-12">
+				Your vote: <div id="user-vote"></div>
+			
+			</div>
 		</div>
+
     <script src="/socket.io/socket.io.js"></script>
     <script src="/client.js"></script>
   </body>
