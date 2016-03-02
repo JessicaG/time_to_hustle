@@ -1,0 +1,30 @@
+{
+  "name": "time_to_hustle",
+  "version": "1.0.0",
+  "description": "time, money, hustle",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JessicaG/time_to_hustle.git"
+  },
+  "keywords": [
+    "express",
+    "hustle",
+    "time"
+  ],
+  "author": "Jessica Goulding",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JessicaG/time_to_hustle/issues"
+  },
+  "homepage": "https://github.com/JessicaG/time_to_hustle#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "lodash": "^4.6.0",
+    "socket.io": "^1.4.5"
+  }
+}
