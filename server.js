@@ -66,16 +66,18 @@ io.on('connection', function (socket) {
 	
   socket.on('message', function (channel, message) {
   if (channel === 'voteCast') {
+    var poll = app.locals.polls[message.id]
+    poll['votes'].push(message.option);
     votes[socket.id] = message;
-    socket.emit('voteCount', countVotes(votes));
-    socket.emit('userVote', message);
+    socket.emit('voteCount-' + poll.id, countVotes(poll));
+    // socket.emit('userVote', message);
   	}
 	});
 
 	socket.on('disconnect', function () {
 	  console.log('A user has disconnected.', io.engine.clientsCount);
 	  delete votes[socket.id];
-	  socket.emit('voteCount', countVotes(votes));
+	  // socket.emit('voteCount-' + pollId, countVotes(poll));
 	  io.sockets.emit('usersConnected', io.engine.clientsCount);
 	});
 

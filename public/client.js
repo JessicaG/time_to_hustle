@@ -19,10 +19,13 @@ for (var i = 0; i < buttons.length; i++) {
     socket.send('voteCast', this.innerText);
   });
 }
+// use Window.location.pathname to listen for poll id
+
+var pollId = window.location.pathname.split('/')[2];
 
 var resultCount = document.getElementById('results');
 
-socket.on('voteCount', function (votes) {
+socket.on('voteCount-' + pollId, function (votes) {
   var results = "Results: ";
     for (var vote in votes) {
       results = results + vote + ": " +  votes[vote] + " "
